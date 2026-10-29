@@ -20,6 +20,7 @@ def main():
     ap.add_argument("--plan", type=Path, help="Usa un plan JSON existente (salta Gemini)")
     ap.add_argument("--semana", help="Etiqueta de semana (default: semana actual)")
     ap.add_argument("--out", type=Path, default=Path("out"))
+    ap.add_argument("--brief", type=Path, help="Archivo de brief local (lo usa el workflow con rclone)")
     a = ap.parse_args()
 
     semana = a.semana or semana_label(date.today())
@@ -35,6 +36,8 @@ def main():
 
     # 1. Brief: Drive manda; si no existe, se siembra con el default
     brief = files("rcontent").joinpath("brief_default.md").read_text(encoding="utf-8")
+    if a.brief and a.brief.exists():
+        brief = a.brief.read_text(encoding="utf-8")
     if drive:
         remoto = drive.read_text("brief.md", root)
         if remoto:

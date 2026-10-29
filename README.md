@@ -43,8 +43,10 @@ cp .env.example .env
 ```
 
 1. **Gemini**: crea la key en https://aistudio.google.com/apikey → `GEMINI_API_KEY`.
-2. **Drive**: sigue los pasos en `scripts/drive_auth.py` y corre `python scripts/drive_auth.py client_secret.json`. Publica la app OAuth ("In production") o el token caduca a los 7 días.
-3. **GitHub**: Settings → Secrets → `GEMINI_API_KEY`, `GDRIVE_CLIENT_ID`, `GDRIVE_CLIENT_SECRET`, `GDRIVE_REFRESH_TOKEN`. Opcionales en Variables: `GEMINI_MODEL`, `POSTS_POR_SEMANA`.
+2. **Drive (rclone, sin Google Cloud)**: instala rclone y corre `rclone config` → remote `gdrive`, tipo `drive`, client id/secret vacíos, scope `drive`, auto config `y`. Prueba: `rclone lsd gdrive:`.
+3. **GitHub**: Settings → Secrets → `GEMINI_API_KEY` y `RCLONE_CONF` (contenido completo de `rclone config file`). Opcionales en Variables: `GEMINI_MODEL`, `POSTS_POR_SEMANA`.
+
+> `drive.py` + `scripts/drive_auth.py` quedan como alternativa si algún día usas un proyecto propio de Google Cloud.
 
 ## Uso
 

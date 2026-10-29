@@ -13,6 +13,8 @@ jobs:
   producir:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      DRIVE_DIR: "gdrive:Rincón Digital · Contenido"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -21,16 +23,26 @@ jobs:
           cache: pip
       - run: pip install -e .
       - run: python -m playwright install --with-deps chromium
-      - name: Producir y subir a Drive
+      - name: Configurar rclone
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash
+          mkdir -p ~/.config/rclone
+          printf '%s' "$RCLONE_CONF" > ~/.config/rclone/rclone.conf
+      - name: Traer brief de Drive # lo siembra si no existe
+        run: |
+          rclone copyto --ignore-existing src/rcontent/brief_default.md "$DRIVE_DIR/brief.md"
+          rclone copyto "$DRIVE_DIR/brief.md" brief.md
+      - name: Producir
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
-          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
-          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3-flash-preview' }}
           GEMINI_MODEL_RESEARCH: ${{ vars.GEMINI_MODEL_RESEARCH || 'gemini-3-flash-preview' }}
           POSTS_POR_SEMANA: ${{ vars.POSTS_POR_SEMANA || '4' }}
-        run: python -m rcontent ${{ inputs.semana && format('--semana {0}', inputs.semana) || '' }}
+        run: python -m rcontent --dry-run --brief brief.md ${{ inputs.semana && format('--semana {0}', inputs.semana) || '' }}
+      - name: Subir a Drive
+        run: rclone copy out/ "$DRIVE_DIR/"
       - uses: actions/upload-artifact@v4 # respaldo por si falla Drive
         if: always()
         with:
