@@ -1,0 +1,6 @@
+.env
+out/
+__pycache__/
+*.egg-info/
+.venv/
+client_secret*.json

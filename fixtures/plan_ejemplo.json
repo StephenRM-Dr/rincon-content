@@ -1,0 +1,98 @@
+{
+  "semana": "ejemplo",
+  "tema_central": "Lo que te cuesta tomar pedidos a mano",
+  "posts": [
+    {
+      "slug": "que-hay-hoy",
+      "formato": "carrusel",
+      "pilar": "curiosidad",
+      "dia_sugerido": "martes 12:00",
+      "hook": "¿Cuántas veces respondes '¿qué hay hoy?' al día?",
+      "objetivo": "Que el dueño se reconozca en el problema y se pregunte si se puede automatizar",
+      "slides": [
+        {"layout": "portada", "kicker": "Delivery", "titulo": "Respondes **«¿qué hay hoy?»** 50 veces al día", "cuerpo": "Y cada vez pierdes 3 minutos que no vuelven."},
+        {"layout": "punto", "titulo": "El cliente pregunta el **menú**", "cuerpo": "Le mandas fotos, audios, precios en dólares y en bolívares. Él lee, duda y vuelve a preguntar."},
+        {"layout": "punto", "titulo": "Arma el pedido **por partes**", "cuerpo": "Tres mensajes después todavía falta la dirección, el método de pago y si quería la salsa aparte."},
+        {"layout": "punto", "titulo": "En hora pico **se te pasa uno**", "cuerpo": "Un pedido mal copiado es un cliente molesto. Uno sin responder es una venta que se fue con otro."},
+        {"layout": "comparacion", "titulo": "Mismo pedido, **otro flujo**", "filas": [
+          {"etiqueta": "Mandas fotos del menú", "valor": "El cliente abre un link"},
+          {"etiqueta": "Copias el pedido a mano", "valor": "Llega ordenado a tu WhatsApp"},
+          {"etiqueta": "Preguntas dirección y pago", "valor": "Ya viene en el mensaje"},
+          {"etiqueta": "Calculas el total", "valor": "Se calcula solo"}
+        ]},
+        {"layout": "cta", "titulo": "¿Quieres ver **el tuyo** funcionando?", "cuerpo": "Te armo una demo con tu menú real, sin compromiso."}
+      ],
+      "guion": [],
+      "caption": "Hay un mensaje que todo negocio de delivery contesta más que cualquier otro: «¿qué hay hoy?».\n\nNo es el cliente. Es el sistema. Si tu menú vive en fotos y audios, cada pedido empieza desde cero.\n\nLa buena noticia: eso se puede hacer solo. El cliente elige desde un link y a ti te llega el pedido completo, con dirección y forma de pago.\n\nComenta MENÚ y te muestro cómo se vería el tuyo.",
+      "hashtags": ["sancristobal", "tachira", "deliverysancristobal", "comidarapida", "emprendedoresvenezuela", "restaurantes", "whatsappbusiness", "menudigital", "automatizacion", "negocioslocales"],
+      "cta": "Comenta MENÚ"
+    },
+    {
+      "slug": "haz-la-cuenta",
+      "formato": "carrusel",
+      "pilar": "profit",
+      "dia_sugerido": "jueves 19:00",
+      "hook": "Haz la cuenta: esto te cuesta tomar pedidos a mano",
+      "objetivo": "Que el dueño ponga un número a su problema",
+      "slides": [
+        {"layout": "portada", "kicker": "Haz la cuenta", "titulo": "Tomar pedidos a mano te cuesta **más de lo que crees**", "cuerpo": "Saca la calculadora. Te va a doler un poquito."},
+        {"layout": "profit", "titulo": "El **tiempo** que se va", "filas": [
+          {"etiqueta": "Ejemplo: pedidos al día", "valor": "40"},
+          {"etiqueta": "Minutos por pedido en WhatsApp", "valor": "4 min"},
+          {"etiqueta": "Al día", "valor": "160 min"},
+          {"etiqueta": "Días de trabajo al mes", "valor": "26"}
+        ], "total": {"etiqueta": "Horas al mes contestando", "valor": "69 h"}},
+        {"layout": "profit", "titulo": "Las **ventas** que se escapan", "filas": [
+          {"etiqueta": "Ejemplo: pedidos perdidos al día", "valor": "3"},
+          {"etiqueta": "Ticket promedio", "valor": "$8"},
+          {"etiqueta": "Al día", "valor": "$24"},
+          {"etiqueta": "Días de trabajo al mes", "valor": "26"}
+        ], "total": {"etiqueta": "Ventas perdidas al mes", "valor": "$624"}},
+        {"layout": "lista", "titulo": "Con el pedido **automático**", "items": ["El cliente elige solo desde un link", "Te llega completo a WhatsApp", "Dirección y pago incluidos", "Tú solo **confirmas y despachas**"]},
+        {"layout": "cta", "titulo": "Calculamos **tus números** reales", "cuerpo": "Dime cuántos pedidos tienes al día y te digo cuánto recuperas."}
+      ],
+      "guion": [],
+      "caption": "69 horas al mes. Eso es casi dos semanas de trabajo respondiendo mensajes.\n\nY eso sin contar los pedidos que se pierden en hora pico porque nadie alcanzó a contestar.\n\nLos números de este carrusel son un ejemplo. Los tuyos pueden ser mejores o peores, pero vale la pena saberlos.\n\nEscríbenos 'DEMO' por DM y hacemos la cuenta con tu negocio.",
+      "hashtags": ["sancristobal", "tachira", "emprendimiento", "restaurantesvenezuela", "delivery", "ventas", "productividad", "automatizacion", "menudigital", "cucuta"],
+      "cta": "Escribe DEMO por DM"
+    },
+    {
+      "slug": "pedido-en-30-segundos",
+      "formato": "reel",
+      "pilar": "curiosidad",
+      "dia_sugerido": "sábado 11:00",
+      "hook": "Este pedido se hizo sin escribirle a nadie",
+      "objetivo": "Mostrar el flujo real en menos de 30 segundos y generar la pregunta '¿cómo lo hago?'",
+      "slides": [
+        {"layout": "portada", "kicker": "Mira esto", "titulo": "Un pedido **sin escribirle a nadie**"}
+      ],
+      "guion": [
+        {"segundo": "0-2s", "visual": "Primer plano del celular con chat de WhatsApp lleno de mensajes", "texto_pantalla": "Así se ve un viernes en la noche…", "voz": null},
+        {"segundo": "2-6s", "visual": "Mano abre un link y aparece el menú con fotos", "texto_pantalla": "…o así", "voz": null},
+        {"segundo": "6-14s", "visual": "Grabación de pantalla: agrega hamburguesa, papas, refresco; elige 'pago móvil'", "texto_pantalla": "Elige, paga y listo", "voz": null},
+        {"segundo": "14-20s", "visual": "Celular del negocio: llega el pedido ordenado con total y dirección", "texto_pantalla": "Al negocio le llega así", "voz": null},
+        {"segundo": "20-25s", "visual": "Logo Rincón Digital sobre fondo negro", "texto_pantalla": "¿Lo quieres en tu negocio? Comenta MENÚ", "voz": null}
+      ],
+      "caption": "Este pedido se hizo sin un solo audio de 2 minutos.\n\nEl cliente eligió desde un link y al negocio le llegó completo, con total, dirección y forma de pago.\n\n¿Te imaginas tu viernes así? Comenta MENÚ y te armo una demo.",
+      "hashtags": ["sancristobal", "tachira", "delivery", "hamburguesas", "comidarapida", "menudigital", "whatsapp", "emprendedores"],
+      "cta": "Comenta MENÚ"
+    },
+    {
+      "slug": "demo-gratis",
+      "formato": "story",
+      "pilar": "venta",
+      "dia_sugerido": "viernes 17:00",
+      "hook": "Te armo tu menú digital en 24 horas",
+      "objetivo": "Captar 3-5 negocios interesados en una demo",
+      "slides": [
+        {"layout": "portada", "kicker": "Esta semana", "titulo": "Te armo tu **menú digital** en 24 h", "cuerpo": "Con tus productos, tus precios y tu logo."},
+        {"layout": "lista", "titulo": "Qué incluye la **demo**", "items": ["Tu menú en un link", "Pedidos directo a tu WhatsApp", "Precios en $ y Bs", "Sin pagar nada para verla"]},
+        {"layout": "cta", "titulo": "Solo **5 cupos** esta semana", "cuerpo": "Responde esta historia con la palabra DEMO."}
+      ],
+      "guion": [],
+      "caption": "Story set — usar sticker de pregunta o respuesta rápida en el último frame.",
+      "hashtags": [],
+      "cta": "Responde DEMO"
+    }
+  ]
+}
